@@ -1,18 +1,20 @@
-#include <stdio.h>
 /*
-	Converte uma temperatura de graus
-	Celsius em Farenheit
+Lembre de compilar com o parâmetro -lm. Por exemplo:
+gcc 9_11.c -lm
 */
-float celsius_to_fahrenheit(float celsius)
+#include <stdio.h>
+#include <math.h>
+
+float area_circulo(float raio)
 {
-	return 1.8 * celsius + 32;
+	return M_PI * pow(raio, 2);
 }
 
 int main()
 {
-	float celsius, fah;
-	scanf("%f", &celsius);
-	fah = celsius_to_fahrenheit(celsius);
-	printf("A temperatura em Fahrenheit é: %f\n", fah);
+	float r, area;
+	scanf("%f", &r);
+	area = area_circulo(r);
+	printf("A área do círculo é: %f\n", area);
 	return 0;
 }

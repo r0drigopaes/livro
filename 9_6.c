@@ -1,20 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int imprimir_varios(int quantidade)
+#define Q '#'
+
+void parede(int altura)
 {
-	while (quantidade)
+	int i;
+	for(i=0; i< altura; ++i)
 	{
-		printf("Adoro programar\n");
-		--quantidade;
+		printf("%c",Q);
 	}
-	printf("O valor de quantidade é: %d\n",quantidade);
+	printf("\n");
+}
+
+void casa(int altura_casa)
+{
+	parede(altura_casa -2);
+	parede(altura_casa -2);
+	parede(altura_casa);
+	parede(altura_casa);
+	parede(altura_casa -2);
+	parede(altura_casa -2);
+   printf("\n");
 }
 
 int main()
 {
-	int x;
-	scanf("%d",&x);
-	imprimir_varios(x);
-	printf("O valor de X é: %d\n",x);
+	casa(6);
+	casa(15);
+	casa(3);
+	casa(20);
 	return 0;
 }

@@ -1,20 +1,26 @@
-/*
-Lembre de compilar com o parâmetro -lm. Por exemplo:
-gcc 9_11.c -lm
-*/
 #include <stdio.h>
-#include <math.h>
 
-float area_circulo(float raio)
+int maior2(int a, int b)
 {
-	return M_PI * pow(raio, 2);
+	if (a > b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
+}
+
+int maior3(int n1, int n2, int n3)
+{
+	return maior2(maior2(n1, n2) , n3);
 }
 
 int main()
 {
-	float r, area;
-	scanf("%f", &r);
-	area = area_circulo(r);
-	printf("A área do círculo é: %f\n", area);
+	int x, y, z;
+	scanf("%d%d%d", &x, &y, &z);
+	printf("O maior entre %d, %d e %d é: %d\n", x, y, z, maior3(x,y,z));
 	return 0;
 }

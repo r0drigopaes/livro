@@ -1,21 +1,24 @@
 #include <stdio.h>
 
-int maior2(int a, int b)
+float dobro_do_maior(float x, float y)
 {
-	if (a > b)
+	float dobro;
+	if (x>y)
 	{
-		return a;
+		dobro = x*2;
 	}
 	else
 	{
-		return b;
+		dobro = y*2;
 	}
+	return dobro;
 }
 
 int main()
 {
-	int x, y;
-	scanf("%d%d", &x, &y);
-	printf("O maior entre %d e %d é: %d\n", x, y, maior2(x,y));
+	float a,b, resultado;
+	scanf("%f%f",&a,&b);
+	resultado = dobro_do_maior(a,b);
+	printf("O dobro é %f\n",resultado);
 	return 0;
 }
