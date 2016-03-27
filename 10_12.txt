@@ -1,0 +1,15 @@
+./matrizes
+Digite as dimensões n e m da matriz
+3 2
+Digite os elementos de A, linha a linha
+1 3
+1 0
+1 2
+Digite os elementos de B, linha a linha
+0 0
+7 5
+2 1
+A soma das matrizes A e B é:
+1 3
+8 5
+3 3
