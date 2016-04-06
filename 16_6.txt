@@ -1,0 +1,2 @@
+gcc -S i++.c
+gcc -S ++i.c
